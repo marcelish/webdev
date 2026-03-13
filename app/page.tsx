@@ -192,8 +192,6 @@ const FAQS = [
    STYLES
    ══════════════════════════════════════════════════════════ */
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Geist+Mono:wght@300;400;500&display=swap');
-
 :root {
   --bg:#FAFAF7;--bg2:#F3F2EF;--bg3:#EBEAE6;--dark:#141413;--dark2:#1E1E1C;
   --t:#1A1A18;--t2:#5C5C58;--t3:#8E8E88;--t4:#B5B5AE;
@@ -611,39 +609,39 @@ export default function WebDevBusiness() {
             </div>
           </R>
           <R d={0.2}>
-            <div className="form">
+            <form className="form" action="https://formspree.io/f/SalazarHMarcel@gmail.com" method="POST">
               <div className="form-row">
-                <input type="text" placeholder="Your name" aria-label="Your name" />
-                <input type="email" placeholder="Email address" aria-label="Email address" />
+                <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
+                <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
               </div>
-              <input type="text" placeholder="Business name" aria-label="Business name" />
-              <input type="url" placeholder="Current website (if any)" aria-label="Current website URL" />
-              <select aria-label="Project type" defaultValue="">
-                <option value="" disabled>What do you need?</option>
-                <option>New website from scratch</option>
-                <option>Redesign existing site</option>
-                <option>Landing page</option>
-                <option>E-commerce store</option>
-                <option>Other / Not sure</option>
+              <input type="text" name="business" placeholder="Business name" aria-label="Business name" />
+              <input type="url" name="website" placeholder="Current website (if any)" aria-label="Current website URL" />
+              <select name="project_type" aria-label="Project type">
+                <option value="">What do you need?</option>
+                <option value="new">New website from scratch</option>
+                <option value="redesign">Redesign existing site</option>
+                <option value="landing">Landing page</option>
+                <option value="ecommerce">E-commerce store</option>
+                <option value="other">Other / Not sure</option>
               </select>
-              <select aria-label="Budget range" defaultValue="">
-                <option value="" disabled>Budget range</option>
-                <option>Under $2,500</option>
-                <option>$2,500 – $5,000</option>
-                <option>$5,000 – $10,000</option>
-                <option>$10,000+</option>
-                <option>Not sure yet</option>
+              <select name="budget" aria-label="Budget range">
+                <option value="">Budget range</option>
+                <option value="under2500">Under $2,500</option>
+                <option value="2500-5000">$2,500 – $5,000</option>
+                <option value="5000-10000">$5,000 – $10,000</option>
+                <option value="10000plus">$10,000+</option>
+                <option value="notsure">Not sure yet</option>
               </select>
-              <textarea placeholder="Tell me about your project — goals, timeline, anything that helps me understand what you need." aria-label="Project details" />
-              <button className="btn btn-a" style={{width:"100%",justifyContent:"center"}}>Send Message <Arrow /></button>
-            </div>
+              <textarea name="message" placeholder="Tell me about your project — goals, timeline, anything that helps me understand what you need." aria-label="Project details" />
+              <button type="submit" className="btn btn-a" style={{width:"100%",justifyContent:"center"}}>Send Message <Arrow /></button>
+            </form>
           </R>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
       <footer>
-        <p>© {new Date().getFullYear()} Architect Web Studio · <a href="https://github.com/marcelish" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p>© 2026 Architect Web Studio · <a href="https://github.com/marcelish" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         <ul className="f-links">
           <li><a href="#showcase">Work</a></li>
           <li><a href="#packages">Pricing</a></li>
