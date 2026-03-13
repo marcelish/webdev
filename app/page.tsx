@@ -609,13 +609,13 @@ export default function WebDevBusiness() {
             </div>
           </R>
           <R d={0.2}>
-            <form className="form" action="https://formspree.io/f/SalazarHMarcel@gmail.com" method="POST">
+            <form className="form" action="https://formspree.io/f/mdawzbdr" method="POST">
               <div className="form-row">
                 <input type="text" name="name" placeholder="Your name" aria-label="Your name" required />
                 <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
               </div>
               <input type="text" name="business" placeholder="Business name" aria-label="Business name" />
-              <input type="url" name="website" placeholder="Current website (if any)" aria-label="Current website URL" />
+              <input type="text" name="website" placeholder="Current website (if any)" aria-label="Current website URL" />
               <select name="project_type" aria-label="Project type">
                 <option value="">What do you need?</option>
                 <option value="new">New website from scratch</option>
